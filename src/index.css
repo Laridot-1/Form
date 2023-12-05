@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas,
+picture {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.container {
+  --white: hsl(0 0% 100%);
+  --black: hsl(0 0% 0%);
+  --error: hsl(10 90% 55%);
+  --border: hsl(0 0% 70% / 0.3);
+  --shadow: hsl(0 0% 0% / 0.4);
+  --placeholder: hsl(0 0% 70%);
+
+  height: 100vh;
+}
+
+form {
+  gap: 3rem;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  max-width: 450px;
+  padding: 5rem 0 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+form h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-control {
+  gap: 1rem;
+  display: grid;
+  padding: 1.5rem 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--white);
+  box-shadow: 0 0 0.4rem -0.1rem var(--shadow);
+}
+
+input {
+  outline: none;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+}
+
+input::placeholder {
+  color: var(--placeholder);
+  text-transform: capitalize;
+}
+
+input:focus {
+  border-color: var(--placeholder);
+}
+
+input.error {
+  border-color: var(--error);
+}
+
+label {
+  gap: 0.25rem;
+  display: grid;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+}
+
+.form-control > p {
+  text-align: center;
+}
+
+.form-control p::first-letter {
+  text-transform: uppercase;
+}
+
+.redirect {
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--placeholder);
+}
+
+label p {
+  font-size: 0.75rem;
+  color: var(--error);
+  justify-self: start;
+}
